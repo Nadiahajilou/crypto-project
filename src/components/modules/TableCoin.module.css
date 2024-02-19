@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 100px;
+    min-height: 1000px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table thead {
+  
+    border-bottom: 2px solid #fff;
+    height: 40px;
+  }
+  .table th {
+  
+    font-size: 1.2 rem;
+    text-align: left;
+  }
+  
+  .table tbody tr {
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #22262e;
+   height: 80px;
+   line-height: 80px;
+  }
+  
+  .symbol{
+      display: flex;
+  
+      align-items: center;
+      cursor: pointer;
+  }
+  .symbol img{
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+  }
+  .symbol span{
+      font-weight: 600;
+      color: #9fa6b7;
+  }
+  
+  .error{
+      color: #d33636;
+  }
+  
+  .success{
+      color: #57bc7c;
+  }
