@@ -3,7 +3,7 @@ import styles from "./TableCoin.module.css";
 
 import TableRow from "./TableRow";
 
-function TableCoins({ coins, isLoading }) {
+function TableCoins({ coins, isLoading ,currency }) {
   console.log(coins);
   return (
     <div className={styles.container}>
@@ -26,7 +26,7 @@ function TableCoins({ coins, isLoading }) {
 
           <tbody>
             {coins.map((coin) => (
-              <TableRow coin={coin} key={coin.id} />
+              <TableRow coin={coin} key={coin.id} currency={currency} />
             ))}
           </tbody>
         </table>

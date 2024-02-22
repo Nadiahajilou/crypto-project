@@ -1,10 +1,29 @@
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 import styles from "./TableCoin.module.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
+const TableRow = ({ coin, currency }) => {
+  const [currencySymbol, setCurrencySymbol] = useState("$");
+  useEffect(() => {
+    // بر اساس مقدار currency تنظیم مقدار currencySymbol
+    switch (currency) {
+      case "usd":
+        setCurrencySymbol("$");
+        break;
+      case "eur":
+        setCurrencySymbol("€");
+        break;
+      case "jpy":
+        setCurrencySymbol("¥");
+        break;
+      default:
+        setCurrencySymbol("$");
+        break;
+    }
+  }, [currency]);
 
-
-const TableRow = ({ coin }) => {
   return (
     <tr>
       <td>
@@ -14,7 +33,10 @@ const TableRow = ({ coin }) => {
         </div>
       </td>
       <td>{coin.name}</td>
-      <td>${coin.current_price.toLocaleString()}</td>
+      <td>
+        {currencySymbol}
+        {coin.current_price.toLocaleString()}
+      </td>
       <td
         className={
           coin.price_change_percentage_24h > 0 ? styles.success : styles.error

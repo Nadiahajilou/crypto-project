@@ -8,6 +8,11 @@ function Paginations({ page, setPage }) {
     if (page >= 10) return;
     setPage((page) => page + 1);
   };
+
+//   const pageClickHandler = () => {
+//     setPage(2);
+//   };
+
   return (
     <div className={styles.Paginations}>
       <button
@@ -17,7 +22,12 @@ function Paginations({ page, setPage }) {
         previous
       </button>
       <p className={page === 1 ? styles.selected : null}>1</p>
-      <p className={page === 2 ? styles.selected : null}>2</p>
+      <p
+        className={page === 2 ? styles.selected : null}
+        // onClick={() => pageClickHandler(2)}
+      >
+        2
+      </p>
       {page > 2 && page < 9 && (
         <>
           <span>...</span> <p className={styles.selected}>{page}</p>
@@ -27,6 +37,7 @@ function Paginations({ page, setPage }) {
 
       <p className={page === 9 ? styles.selected : null}>9</p>
       <p className={page === 10 ? styles.selected : null}>10</p>
+
       <button
         onClick={nextHandler}
         className={page === 10 ? styles.disable : null}
