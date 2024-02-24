@@ -1,6 +1,8 @@
 .searchBox {
-  margin: 50px 0px;
+  margin: 50px 80px;
   position: relative;
+ 
+  
 }
 
 .searchBox input {

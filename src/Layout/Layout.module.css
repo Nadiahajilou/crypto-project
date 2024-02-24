@@ -1,0 +1,32 @@
+.header {
+  background-color: #3874ff;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 120px;
+  border-radius: 10px;
+  width: 980px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.footer {
+  background-color: #3874ff;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 980px;
+  margin-bottom: 25px;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
